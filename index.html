@@ -1,0 +1,77 @@
+<!DOCTYPE html>
+<html lang="fr">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Pac-Man NSI</title>
+  <link rel="stylesheet" href="style.css">
+</head>
+<body>
+  <main class="page">
+    <section class="panel">
+      <div class="heading">
+        <p class="eyebrow">Projet NSI</p>
+        <h1>Pac-Man</h1>
+        <p class="subtitle">Version navigateur en JavaScript natif avec un fantôme piloté par BFS.</p>
+      </div>
+
+      <div class="controls">
+        <button id="start-button" type="button">Lancer</button>
+        <button id="restart-button" type="button">Recommencer</button>
+        <button id="sound-button" type="button" aria-pressed="true">Son : activé</button>
+      </div>
+
+      <div class="status-grid">
+        <article class="status-card">
+          <span class="status-label">Score</span>
+          <strong id="score-value">0</strong>
+        </article>
+        <article class="status-card">
+          <span class="status-label">Pastilles restantes</span>
+          <strong id="pellet-value">0</strong>
+        </article>
+        <article class="status-card">
+          <span class="status-label">État</span>
+          <strong id="state-value">En attente</strong>
+        </article>
+      </div>
+
+      <p id="message" class="message">Clique sur Lancer pour commencer la partie.</p>
+
+      <div class="instructions">
+        <p>Commandes : flèche haut, bas, gauche et droite.</p>
+        <p>Sur smartphone, utilise le joystick tactile sous la zone de jeu.</p>
+        <p>Objectif : manger toutes les pastilles avant d’être rattrapé par le fantôme.</p>
+      </div>
+    </section>
+
+    <section class="game-shell">
+      <canvas id="game-canvas" width="600" height="600" aria-label="Zone de jeu Pac-Man"></canvas>
+      <div id="mobile-start-slot" class="mobile-start-slot" aria-hidden="true">
+        <button id="start-button-mobile" type="button">Lancer</button>
+      </div>
+      <div id="touch-joystick" class="touch-joystick" aria-hidden="true">
+        <p class="touch-label">Joystick</p>
+        <div id="joystick-base" class="joystick-base">
+          <div id="joystick-thumb" class="joystick-thumb"></div>
+        </div>
+      </div>
+    </section>
+
+    <section class="panel">
+      <p id="message" class="message">Liste des fichiers sources utilisés.</p>
+
+      <div class="instructions">
+		<ul>
+			<li><a href="index.html">index.html</a> : HTML.</li>
+			<li><a href="style.css">style.css</a> : CSS.</li>
+			<li><a href="script.js">script.js</a> : JAVASCRIPT.</li>
+		</ul>
+      </div>
+    </section>	
+	
+  </main>
+
+  <script src="script.js"></script>
+</body>
+</html>
